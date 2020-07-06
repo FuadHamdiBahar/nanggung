@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+
+
+{% if success_login == False %}
+<div class="alert alert-danger" role="alert">
+    Akun anda belum terdaftar silahkan Register
+</div>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="username">Username: </label>
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock contents %}

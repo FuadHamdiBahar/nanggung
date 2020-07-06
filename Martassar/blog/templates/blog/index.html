@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+
+{% block page_title %}
+Blog
+{% endblock page_title %}
+
+
+
+{% block contents %}
+<div class="row">
+    {% for p in produk %}
+    <div class="col-md-3 mt-3">
+        <div class="card" style="width: 250px;">
+            <img src="{% static '' %}{{p.foto}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <!-- <h1>{{p.id}}</h1> -->
+                <h5 class="card-title">{{p.nama_produk}}</h5>
+                <p class="card-text"><b>{{p.harga}}</b></p>
+                <p class="card-text">{{p.nama_toko}}</p>
+                <a href="{% url 'blog:detail' p.id %}" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock contents %}

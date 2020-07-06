@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+{{page_title}}
+{% endblock page_title %}
+
+
+{% block contents %}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="text-center">
+            <img src="{% static '' %}{{object.foto}}" class="rounded img-thumbnail img-fluid" alt="Responsive image"
+                style="width: 600px;">
+        </div>
+    </div>
+    <div class="col">
+        <h1>{{object.nama_produk}}</h1>
+        <p>{{object.nama_toko}} - {{object.published|date}}</p>
+        <h4>Rp. {{object.harga}}</h4>
+        <text name="" id="" cols="30" rows="10">{{object.deskripsi}}</text>
+        <div class="mt-3">
+            <a type="button" class="btn btn-primary text-light">Tambahkan</a>
+        </div>
+    </div>
+</div>
+{% endblock contents %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block page_title %}
+Register
+{% endblock page_title %}
+
+{% block contents %}
+<h2>Sign up</h2>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <button type="submit">Sign up</button>
+</form>
+{% endblock contents %}
