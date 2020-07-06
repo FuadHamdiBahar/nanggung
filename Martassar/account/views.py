@@ -35,6 +35,7 @@ class AccountLoginView(LoginView):
         context.update({
             'success_login': self.success_login
         })
+        print(context)
         return context
 
 

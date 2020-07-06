@@ -34,9 +34,9 @@ class KeranjangListView(ListView):
 class ProdukDetailView(DetailView):
     model = Produk
     template_name = 'blog/detail.html'
-    # extra_context = {
-    #     'page_title': 'Detail Produk',
-    # }
+    extra_context = {
+        'page_title': 'Detail Produk',
+    }
 
     # def get_context_data(self, **kwargs):
     #     self.kwargs.update(self.extra_context)

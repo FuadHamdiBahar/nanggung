@@ -14,17 +14,15 @@
                     <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'blog:keranjang' 1 %}">Keranjang</a>
+                    <a class="nav-link" href="{% url 'blog:keranjang' user.id %}">Keranjang</a>
                 </li>
             </ul>
             <div class="nav-item dropdown ml-auto">
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Fuad Hamdi Bahar
+                    {{user}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="{% url 'account:logout' %}">Log out</a>
                 </div>
             </div>

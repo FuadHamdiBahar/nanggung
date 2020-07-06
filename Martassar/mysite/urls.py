@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from . views import IndexView
+from . views import IndexView, Home
 
 urlpatterns = [
     path('account/', include('account.urls', namespace='account')),
